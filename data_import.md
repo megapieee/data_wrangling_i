@@ -23,6 +23,21 @@ litters_data = read_csv(file = "./data/FAS_litters.csv")
 
 ``` r
 litters_data = janitor::clean_names(litters_data)
+pups_data = read_csv(file = "./data/FAS_pups.csv")
+```
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   `Litter Number` = col_character(),
+    ##   Sex = col_double(),
+    ##   `PD ears` = col_double(),
+    ##   `PD eyes` = col_double(),
+    ##   `PD pivot` = col_double(),
+    ##   `PD walk` = col_double()
+    ## )
+
+``` r
+pups_data = janitor::clean_names(pups_data)
 ```
 
 ## Load in the pups data
@@ -78,3 +93,5 @@ write_csv(mlb11_data_subset, path = "./data/mlb_subset.csv")
 ``` r
 pulse_data = haven::read_sas("./data/public_pulse_data.sas7bdat")
 ```
+
+\#\#data manipulating

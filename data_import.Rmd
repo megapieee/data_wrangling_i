@@ -9,7 +9,7 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-library(readxl)
+##library(readxl)
 ```
 
 
@@ -18,6 +18,8 @@ library(readxl)
 ```{r}
 litters_data = read_csv(file = "./data/FAS_litters.csv")
 litters_data = janitor::clean_names(litters_data)
+pups_data = read_csv(file = "./data/FAS_pups.csv")
+pups_data = janitor::clean_names(pups_data)
 ```
 
 ## Load in the pups data
@@ -65,3 +67,9 @@ write_csv(mlb11_data_subset, path = "./data/mlb_subset.csv")
 pulse_data = haven::read_sas("./data/public_pulse_data.sas7bdat")
 ```
 
+
+##data manipulating
+
+```{r}
+
+```
